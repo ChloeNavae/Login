@@ -42,5 +42,9 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation("com.loopj.android:android-async-http:1.4.9")
-
+    implementation("com.google.code.gson:gson:2.8.5")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("com.squareup.picasso:picasso:2.5.2")
 }

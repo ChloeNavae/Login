@@ -2,6 +2,7 @@ package com.leonardo.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,12 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 _id = _idEditText.getText().toString();
                 _password = _passwordEditText.getText().toString();
                 _url = "https://stmikpontianak.cloud/011100862/login.php?id=" + _id + "&password=" + _password;
+                Log.d("*tw*", "_url:" + _url);
 
                 AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
                 asyncHttpClient.get(_url, new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                         String hasil = new String(responseBody);
+                        Log.d("*tw*", "hasil:" + hasil);
 
                         if (!hasil.equals("[{\"idCount\":\"1\"}]"))
                         {

@@ -26,6 +26,6 @@
         android:drawableLeft="@drawable/student"
         android:textColor="#fff"
         android:text="Master Mahasiswa"
-        android:id="@+id/tampilMahasiswaButton">
+        android:id="@+id/showMahasiswaButton">
     </Button>
 </GridLayout>

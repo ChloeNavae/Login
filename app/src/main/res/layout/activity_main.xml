@@ -13,10 +13,10 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="158dp"
-        android:text="Hello World!"
         android:src="@drawable/logostmik"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp">
     </ImageView>
     <EditText
         android:layout_width="match_parent"

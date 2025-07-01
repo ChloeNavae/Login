@@ -1,6 +1,9 @@
 package com.leonardo.login;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MenuActivity extends AppCompatActivity {
+
+    private Button _showMahasiswaButton;
+    private Intent _showMahasiswaIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +26,21 @@ public class MenuActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        initShowMahasiswaButton();
     }
+
+    private void initShowMahasiswaButton() {
+        _showMahasiswaButton = (Button) findViewById(R.id.showMahasiswaButton);
+
+        _showMahasiswaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _showMahasiswaIntent = new Intent(getApplicationContext(), ShowMahasiswaActivity.class);
+                startActivity(_showMahasiswaIntent);
+            }
+        });
+    }
+
+
 }
