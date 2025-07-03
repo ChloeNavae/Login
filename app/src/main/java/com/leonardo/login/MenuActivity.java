@@ -13,8 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button _showMahasiswaButton;
-    private Intent _showMahasiswaIntent;
+    private Button _showMahasiswaButton, _showForexButton;
+    private Intent _showMahasiswaIntent, _showForexIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
         initShowMahasiswaButton();
+        initShowForexButton();
     }
 
     private void initShowMahasiswaButton() {
@@ -38,6 +39,17 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 _showMahasiswaIntent = new Intent(getApplicationContext(), ShowMahasiswaActivity.class);
                 startActivity(_showMahasiswaIntent);
+            }
+        });
+    }
+
+    private void initShowForexButton(){
+        _showForexButton = (Button) findViewById(R.id.showForexButton);
+        _showForexButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _showForexIntent = new Intent(getApplicationContext(), ForexMainActivity.class);
+                startActivity(_showForexIntent);
             }
         });
     }
